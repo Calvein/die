@@ -21,10 +21,10 @@ b {
 <body>
 
 <script>
-var dices = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅']
+var dice = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅']
 var throws = +location.hash.slice(1) || 1
 
-// Create the dices
+// Create the dice
 var numbers = []
 for (var die = 0, number; die < throws; die++) {
     number = getNumber()
@@ -46,7 +46,7 @@ function getNumber(number) {
 }
 
 function showDie(number, i) {
-    var die = addElement('span', dices[number - 1])
+    var die = addElement('span', dice[number - 1])
     var fontSize = throws === 1 ? 60 : 100 / throws
     die.style.fontSize = fontSize + 'vw'
 
