@@ -1,0 +1,63 @@
+<!doctype html>
+<style>
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+b {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+}
+</style>
+
+<body>
+
+<script>
+var dices = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅']
+var throws = +location.hash.slice(1) || 1
+
+// Create the dices
+var numbers = []
+for (var die = 0, number; die < throws; die++) {
+    number = getNumber()
+    showDie(number, die)
+    numbers.push(number)
+}
+
+// Add total
+var total = numbers.reduce(function(a, b) { return a + b })
+addElement('b', total)
+
+// Change the title
+var title = numbers.join(' - ')
+title += ' = ' + total
+document.title = title
+
+function getNumber(number) {
+    return Math.floor(6 * Math.random()) + 1
+}
+
+function showDie(number, i) {
+    var die = addElement('span', dices[number - 1])
+    var fontSize = throws === 1 ? 60 : 100 / throws
+    die.style.fontSize = fontSize + 'vw'
+
+    document.body.appendChild(die)
+}
+
+function addElement(tag, text) {
+    var el = document.createElement(tag)
+    el.textContent = text
+    document.body.appendChild(el)
+
+    return el
+}
+</script>
