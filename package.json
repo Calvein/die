@@ -1,0 +1,43 @@
+{
+  "name": "die",
+  "version": "1.0.0",
+  "description": "A simple way to roll dice done in half an hour (the v1) after seing the dice utf-8 characters in copypastecharacter.com",
+  "main": "index.html",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build --prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Calvein/die.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Calvein/die/issues"
+  },
+  "keywords": [
+    "die",
+    "dice"
+  ],
+  "homepage": "https://github.com/Calvein/die",
+  "author": "François Robichet <calvein>",
+  "license": "ISC",
+  "devDependencies": {
+    "babelify": "^5.0.4",
+    "browserify": "^9.0.3",
+    "browserify-jade": "^1.0.0",
+    "connect": "^3.3.5",
+    "growl": "^1.8.1",
+    "gulp": "^3.8.11",
+    "gulp-duration": "0.0.0",
+    "gulp-jade": "^1.0.0",
+    "gulp-streamify": "0.0.5",
+    "gulp-stylus": "^2.0.1",
+    "gulp-uglify": "^1.1.0",
+    "gulp-util": "^3.0.4",
+    "jade": "^1.9.2",
+    "serve-static": "^1.9.2",
+    "tiny-lr": "^0.1.5",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^2.6.2"
+  }
+}
