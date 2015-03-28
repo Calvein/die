@@ -12,9 +12,13 @@ class OptionsPanel extends View {
 
     render() {
         var talk = this.changeOption('talk', this.getOption('talk'))
+        var anim = this.changeOption('anim', this.getOption('anim'))
+        var totals = this.changeOption('totals', this.getOption('totals'))
 
         this.$el.html(tmpl({
             talk: talk
+          , anim: anim
+          , totals: totals
         }))
     }
 

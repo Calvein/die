@@ -27,19 +27,22 @@ body
     margin 0
     background #fafafa
     color text-color
+    perspective 2000px
 
 .panel
     position absolute
     width 100%
-    height 150px
     padding 15px 20px 15px 30px
     background #fefefe
     border-bottom 2px solid black
-    transform translate(0, -@height)
+    // opacity 0
+    transform rotateX(90deg)
+    transform-origin 50% 0
     transition .2s
     z-index 1
     &.open
-        transform translate(0, 0)
+        opacity 1
+        transform scale(1)
 
 .trigger
     position absolute
